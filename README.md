@@ -1,2 +1,2 @@
 ## Chatter_bot-using-Flask
-<img src='pic1.png'>
+<img src='img2.png'>
