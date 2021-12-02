@@ -5,7 +5,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-chatbot = ChatBot('Ron Obvious',storage_adapter="chatterbot.storage.SQLStorageAdapter")
+chatbot = ChatBot('Zoro',storage_adapter="chatterbot.storage.SQLStorageAdapter")
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
 # Train the chatbot based on the english corpus
