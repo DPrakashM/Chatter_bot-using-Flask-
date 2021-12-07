@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <title>Data Semantics</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/typing.css') }}">
+
+<style>
+    .bgimg {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        background-attachment: fixed;
+        background-position: center top;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .ds_logo {
+        height: 76px;
+        width: 354px;
+        opacity: 1;
+        margin-top: 82px;
+        margin-left: 56px;
+    }
+</style>
+
+</head>
+
+<a href="#" style="width:30%;height:20%;display:grid;">
+        <img src="/static/ds_logo.png" class="ds_logo">
+</a>
+<div class="container-fluid">
+<img src="/static/login_wallpaper.png" class="bgimg">
+</div>
+
+<div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img id="bot_icon_src" src="https://datasemanticschatbots.in/bot_style/B2B/aWNlY3JlYW0=?channel_name=WEBCHAT&amp;rand=88051" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Sirius Chatbot</h4>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div>
+                        <div class="messages__item messages__item--visitor">
+                            {{ ourresponse }}
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            {{ botresponse }}
+                        </div>
+                        <div class="messages__item messages__item--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <form action="/get" method="GET">
+                    <input type="text" name="msg" placeholder="Write a message...">
+                    <input class="chatbox__send--footer" type="Submit" value="Send" style="position: relative;float:right;color:#164cb7" >
+
+                    </form>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button>button</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/Chat.js"></script>
+<script src="/static/js/app.js"></script>
+
+
+</html>
